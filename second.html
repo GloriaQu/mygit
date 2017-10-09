@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{margin:0px;}
+        #content2{float:left;width:828px;height:586px;}
+        #second-cont1{float:left;width:310px;margin-right:20px;height:586px;}
+        #ylimg{background-image: url("../images/pro_img/blue_one_small.jpg");border:1px solid #eeeeee;height:310px;width:310px;overflow: hidden;cursor: pointer;}
+        #dt{background-image: url("../images/pro_img/blue_one_big.jpg");background-size:775px 775px;border:1px solid #eeeeee;height:0px;width:310px;position: relative;top:-735px;left:328px;opacity:0;}
+        #dt p{margin:0px;padding:5px 0px;background:rgba(0,0,0,0.3);text-align: center;font-size:14px;color:white;}
+        #xzt{position: absolute;background:rgba(0,0,0,0.4);width:124px;height:124px;top:0px;left:0px;opacity: 0;}/*top:-312px;*/
+
+        #ckdt{border-radius:15px;background-image:url("../images/look.gif");width:99px;height:21px;margin:10px 0px 5px 90px;text-align: center;font-size:15px;cursor: pointer;}
+        .slimg{border:1px solid grey;margin:8px;width:85px;cursor: pointer;}
+        .slimg:nth-of-type(1){border:1px solid red;}
+        .cpxx{display: inline-block;width:100px;height:20px;text-align: center;border:1px solid grey;cursor: pointer;}
+        .cpxx:hover{background-color:darkgrey;}
+        #cptl span:nth-of-type(1){border-bottom-color:transparent;}
+        #cpsx,#cpcmb,#cpjs{width:284px;height:65px;border:1px solid grey;padding:10px;background-color: white;border-top:0px;}
+        #cpsx{position: relative;opacity:1;}
+        #cpcmb{position: relative;top:-86px;opacity:1;}
+        #cpjs{position: relative;top:-172px;opacity:1;}
+
+        #second-cont2{float: left;}
+        #second-cont2{width:498px;font-size:14px;}
+        #second-cont2 h5{margin:10px 0px;font-size:16px;}
+        #jg span:nth-of-type(2){text-decoration: line-through;}
+        #cx span:nth-of-type(2){color:red;font-size:25px;}
+        .ysbc{margin:7px;border:1px solid darkgrey;cursor: pointer;}
+        .ysbc:nth-of-type(1){border:1px solid red;}
+        .cmb{display: inline-block;width:30px;height:24px;border:1px solid darkgrey;margin:7px;text-align: center;padding-top:6px;cursor: pointer;}
+        .cmb:nth-of-type(1){border:1px solid red;color:red;}
+        #gwc{background-image:url("../images/btn_cart.png");width:94px;height:29px;border-radius:4px;margin:5px 0px;}
+        #qpdtbg{background:rgba(0,0,0,0.4);width:100%;height:0px;position: absolute;top:-0px;left:-0px;z-index:5;overflow: hidden;}
+        #qpdt{margin:50px auto;width:600px;height:625px;background-color:white;text-align: center;}
+        #qxdt{width:548px;height:548px;border:1px solid darkgrey;margin:25px 25px 0px 25px;}
+        #closebutton{position: relative;width:23px;height:23px;left:575px;top:-630px;}
+        #closebutton:hover{background-color:red;color:white;}
+    </style>
+</head>
+<body>
+<div id="content2">
+
+    <div id="second-cont1">
+        <div id="ylimg">
+                <div id="xzt"></div>
+        </div>
+        <div id="ckdt" onclick="opendt()"></div>
+        <div>
+            <img class="slimg" onclick="htp(0)" src="../images/pro_img/blue_one.jpg" alt=""><img class="slimg" onclick="htp(1)"src="../images/pro_img/blue_two.jpg" alt=""><img class="slimg" onclick="htp(2)"src="../images/pro_img/blue_three.jpg" alt="">
+        </div>
+        <div id="cptl">
+            <span class="cpxx" onclick="xxck(0)">产品属性</span><span class="cpxx" onclick="xxck(1)">产品尺码表</span><span class="cpxx" onclick="xxck(2)">产品介绍</span>
+        </div>
+        <div class="cpxq" id="cpsx">撑着油纸伞，独自彷徨在悠长，悠长又寂寥的雨巷，我希望逢着一个丁香一样的结着愁怨的姑娘。</div>
+        <div class="cpxq" id="cpcmb">她是有丁香一样的颜色，丁香一样的芬芳，丁香一样的忧愁，在雨中哀怨，哀怨又彷徨；</div>
+        <div class="cpxq" id="cpjs">她彷徨在这寂寥的雨巷，撑着油纸伞像我一样，像我一样地 默默彳亍着，冷漠，凄清，又惆怅。</div>
+        <div id="dt">
+            <p>免烫棉条纹衬衣</p>
+        </div>
+    </div>
+    <div id="second-cont2">
+        <h5>免烫棉条纹衬衣</h5>
+        <p>撑着油纸伞，独自彷徨在悠长、悠长又寂寥的雨巷。我希望逢着一个丁香一样结着愁怨的姑娘。她是有丁香一样的颜色，丁香一样的芬芳，丁香一样的忧愁，在雨中哀怨，哀怨又彷徨。</p>
+        <div id="jg"><span>价 格：</span><span>379.00元</span></div>
+        <div id="cx"><span>促 销：</span><span>200.00</span><span>元</span></div>
+        <div id="ys"><span>颜 色：</span><span id="ysname">蓝白</span></div>
+        <div>
+            <img class="ysbc" onclick="ysbclik(0)" src="../images/pro_img/blue.jpg" alt=""><img class="ysbc" onclick="ysbclik(1)" src="../images/pro_img/yellow.jpg" alt=""><img class="ysbc" onclick="ysbclik(2)" src="../images/pro_img/green.jpg" alt="">
+        </div>
+        <div><span>尺 寸：</span><span id="cc">S</span></div>
+        <div>
+            <span class="cmb" onclick="cmbclik(0)">S</span><span class="cmb" onclick="cmbclik(1)">M</span><span class="cmb" onclick="cmbclik(2)">L</span><span class="cmb" onclick="cmbclik(3)">XL</span>
+        </div>
+        数量：<input id="num" type="number" min="1" max="500" value="1">
+        <div><span>总 计：</span><span id="zj">200元</span></div>
+        <span>给商品评分</span>
+        <div id="xj">小星星</div>
+        <a href="game.html"><div id="gwc"></div></a>
+    </div>
+</div>
+</body>
+<script>
+    var oylimg=document.getElementById("ylimg");
+    var oslimg=document.getElementsByClassName("slimg");
+    var oysbc=document.getElementsByClassName("ysbc");
+    var ocpxx=document.getElementsByClassName("cpxx");
+    var ocpxq=document.getElementsByClassName("cpxq");
+    var hqcmb=document.getElementsByClassName("cmb");
+    var zjnum=document.getElementById("num");
+    var odt=document.getElementById("dt");
+    var oxzt=document.getElementById("xzt");
+    //产品信息查看
+    function xxck(b) {
+        clearborder2();
+        ocpxx[b].style.cssText="border-bottom-color:transparent;";
+        ocpxq[b].style.cssText="opacity:1;";
+    }
+    //清除产品信息边框
+    function clearborder2() {
+        for(k=0;k<3;k++){
+            ocpxq[k].style.cssText="opacity:0;";
+            ocpxx[k].style.cssText="border-bottom-color:grey;";
+        }
+    }
+    //选择商品颜色操作
+    var oystb="blue";//yanse
+    var ohtpname="one";//1 2 3
+    var ystb=["blue","yellow","green"];
+    var ysm=["蓝白","黄白","粉绿"];
+    function ysbclik(c) {
+        clearysborder();
+        oysbc[c].style.cssText="border:1px solid red;";
+        document.getElementById("ysname").innerHTML=ysm[c];
+        oystb=ystb[c];
+        oslimg[2].style.opacity="1";
+        if(oystb=="green"){
+            oslimg[2].style.opacity="0";
+            if(ohtpname=="three"){
+                ohtpname="two";
+                clearborder1();
+                oslimg[1].style.cssText="border:1px solid red";
+            }
+        }
+        oylimg.style.cssText="background-image: url('../images/pro_img/"+ystb[c]+"_"+ohtpname+"_small.jpg');";
+        document.getElementById("qxdt").src="../images/pro_img/"+ystb[c]+"_"+ohtpname+"_big.jpg";
+        document.getElementById("dt").style.backgroundImage="url('../images/pro_img/"+ystb[c]+"_"+ohtpname+"_big.jpg')";
+        oslimg[0].src="../images/pro_img/"+ystb[c]+"_one.jpg";
+        oslimg[1].src="../images/pro_img/"+ystb[c]+"_two.jpg";
+        oslimg[2].src="../images/pro_img/"+ystb[c]+"_three.jpg";
+    }
+    //清除颜色选择边框
+    function clearysborder() {//清除颜色选择边框
+        for(f=0;f<3;f++){
+            oysbc[f].style.border="1px solid darkgrey";
+        }
+    }
+    //产品细节图查看
+    var htpname=new Array("one","two","three")
+    function htp(a) {
+        clearborder1();
+        ohtpname=htpname[a];
+        oslimg[a].style.cssText="border:1px solid red";
+        document.getElementById("ylimg").style.cssText="background-image: url('../images/pro_img/"+oystb+"_"+htpname[a]+"_small.jpg');";
+        document.getElementById("qxdt").src="../images/pro_img/"+oystb+"_"+htpname[a]+"_big.jpg";
+        document.getElementById("dt").style.backgroundImage="url('../images/pro_img/"+oystb+"_"+htpname[a]+"_big.jpg')";
+    }
+    //清除缩略图边框
+    function clearborder1() {
+        for(k=0;k<3;k++){
+        oslimg[k].style.border="1px solid grey";
+        }
+    }
+    //打开大图
+    function opendt() {
+        document.getElementById("qpdtbg").style.cssText="height:110%;";
+    }
+    //关闭大图
+    function closedt() {
+        document.getElementById("qpdtbg").style.cssText="height:0px;";
+    }
+    //尺寸选择
+    var ocmb=["S","M","L","XL"];
+    function cmbclik(d) {
+        clearccborder();
+        hqcmb[d].style.cssText="border:1px solid red;color:red;";
+        document.getElementById("cc").innerHTML=ocmb[d];
+    }
+    function clearccborder() {//清除尺寸选择边框
+        for(f=0;f<4;f++){
+            hqcmb[f].style.cssText="border:1px solid darkgrey;color:black;";
+        }
+    }
+    //价格变化
+    zjnum.onchange=function () {
+        var zjn=zjnum.value;
+        document.getElementById("zj").innerHTML=zjn*200+"元";
+    }
+    //鼠标移动查看清晰图片
+    oylimg.onmouseover=function () {
+        odt.style.height="310px";
+        odt.style.opacity="1";
+        oxzt.style.opacity="1";
+    }
+    oylimg.onmouseout=function () {
+        odt.style.height="0px";
+        odt.style.opacity="0";
+        oxzt.style.opacity="0";
+    }
+    oylimg.onmousemove=function (ev) {
+        oscrolltop=document.documentElement.scrollTop || document.body.scrollTop;
+        oscrollleft=document.documentElement.scrollLeft || document.body.scrollLeft;
+        x=ev.clientX + oscrollleft - document.body.clientLeft;
+        y=ev.clientY + oscrolltop - document.body.clientTop;
+        ol=oylimg.offsetLeft;
+        x=x-ol-62;
+        y=y-177;
+        x1=panduan(x)+ol;
+        y1=panduan(y)+115;
+        oxzt.style.top=y1+"px";
+        oxzt.style.left=x1+"px";
+        x2=(ol-x1)*2.5;
+        y2=(115-y1)*2.5;
+        odt.style.backgroundPositionX=x2+"px";
+        odt.style.backgroundPositionY=y2+"px";
+    }
+    function panduan(h) {
+        if(h<0){
+            h=0;
+        }
+        else if(h>186){
+            h=186;
+        }
+        return h;
+    }
+</script>
+</html>
